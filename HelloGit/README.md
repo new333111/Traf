@@ -6,4 +6,4 @@ This is my first project created using Acode and GitHub.
 
 - Simple project
 - Version control with Git
-- Mobile development
+- Mobile developmentgit
