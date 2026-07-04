@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>آلة حاسبة</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input, button {
+      font-size: 20px;
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .box {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🧮 آلة حاسبة</h1>
+
+<input type="number" id="num1" placeholder="الرقم الأول">
+<br>
+<input type="number" id="num2" placeholder="الرقم الثاني">
+
+<div class="box">
+  <button onclick="calc('+')">+</button>
+  <button onclick="calc('-')">-</button>
+  <button onclick="calc('*')">×</button>
+  <button onclick="calc('/')">÷</button>
+</div>
+
+<h2 id="result">النتيجة: 0</h2>
+
+<script>
+function calc(op) {
+  let n1 = parseFloat(document.getElementById("num1").value);
+  let n2 = parseFloat(document.getElementById("num2").value);
+  let result = 0;
+
+  if (isNaN(n1) || isNaN(n2)) {
+    document.getElementById("result").innerText = "أدخل رقمين صحيحين";
+    return;
+  }
+
+  if (op === '+') result = n1 + n2;
+  if (op === '-') result = n1 - n2;
+  if (op === '*') result = n1 * n2;
+  if (op === '/') result = n1 / n2;
+
+  document.getElementById("result").innerText = "النتيجة: " + result;
+}
+</script>
+
+</body>
+</html>
